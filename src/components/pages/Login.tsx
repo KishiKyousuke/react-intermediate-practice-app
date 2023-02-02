@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { memo, FC } from "react";
 
+import { PrimaryButton } from "../atoms/button/PrimaryButton";
+
 export const Login: FC = memo(() => {
   return (
     <Flex align="center" justify="center" height="100vh">
@@ -19,9 +21,7 @@ export const Login: FC = memo(() => {
         <Divider my={4} />
         <Stack spacing={6} py={4} px={10}>
           <Input placeholder="ユーザーID" />
-          <Button bg="teal.400" color="white" _hover={{ cursor: "pointer" }}>
-            ログイン
-          </Button>
+          <PrimaryButton>ログイン</PrimaryButton>
         </Stack>
       </Box>
     </Flex>

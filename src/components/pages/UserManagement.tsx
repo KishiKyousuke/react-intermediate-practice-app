@@ -1,5 +1,13 @@
 import { memo, FC } from "react";
 
+import { UserCard } from "../organism/user/UserCard";
+
 export const UserManagement: FC = memo(() => {
-  return <p>ユーザー管理ページです</p>;
+  return (
+    <UserCard
+      imageUrl="https://source.unsplash.com/random"
+      userName="Kyo18"
+      fullName="Kyosuke Kishi"
+    />
+  );
 });

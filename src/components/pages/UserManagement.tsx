@@ -7,11 +7,9 @@ import {
   WrapItem,
   Spinner,
   Center,
-  Modal,
-  ModalOverlay,
-  ModalContent,
   useDisclosure
 } from "@chakra-ui/react";
+import { UserDetailModal } from "../organism/user/UserDetailModal";
 
 export const UserManagement: FC = memo(() => {
   const { getUsers, users, loading } = useAllUsers();
@@ -39,6 +37,7 @@ export const UserManagement: FC = memo(() => {
           ))}
         </Wrap>
       )}
+      <UserDetailModal isOpen={isOpen} onClose={onClose} />
     </>
   );
 });

@@ -2,6 +2,8 @@ import { memo, FC } from "react";
 import {
   Stack,
   Modal,
+  ModalOverlay,
+  ModalContent,
   ModalHeader,
   ModalCloseButton,
   ModalBody,
@@ -11,13 +13,12 @@ import {
 } from "@chakra-ui/react";
 
 type Props = {
-  imageUrl: string;
-  userName: string;
-  fullName: string;
-  onClick: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 };
 
 export const UserDetailModal: FC<Props> = memo((props) => {
+  const { isOpen, onClose } = props;
   return (
     <Modal
       isOpen={isOpen}

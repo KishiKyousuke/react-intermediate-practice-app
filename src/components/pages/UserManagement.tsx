@@ -11,11 +11,13 @@ import {
 } from "@chakra-ui/react";
 import { UserDetailModal } from "../organism/user/UserDetailModal";
 import { useSelectUser } from "../../hooks/useSelectUser";
+import { useLoginUser } from "../../hooks/useLoginUser";
 
 export const UserManagement: FC = memo(() => {
   const { getUsers, users, loading } = useAllUsers();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { onSelectUser, selectedUser } = useSelectUser();
+  const { loginUser } = useLoginUser();
 
   const onClickUser = useCallback(
     (id: number) => {

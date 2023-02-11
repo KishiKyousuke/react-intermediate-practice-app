@@ -18,6 +18,7 @@ export const UserManagement: FC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { onSelectUser, selectedUser } = useSelectUser();
   const { loginUser } = useLoginUser();
+  console.log(loginUser);
 
   const onClickUser = useCallback(
     (id: number) => {

@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const PrimaryButton: FC<Props> = memo((props) => {
-  const { children, onClick, disabled = true, loading = false } = props;
+  const { children, onClick, disabled = false, loading = false } = props;
   return (
     <Button
       bg="teal.400"
